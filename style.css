@@ -129,6 +129,7 @@ a {
   color: var(--accent-cyan);
   text-decoration: none;
   transition: color var(--transition-fast);
+  cursor: pointer;
 }
 
 a:hover {
@@ -761,6 +762,148 @@ h6 {
 }
 
 /* ===================================================
+   MICRO-ANIMATIONS — Pure CSS fade-in
+   =================================================== */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* Staggered delays */
+.fade-in:nth-of-type(2) {
+  animation-delay: 0.08s;
+}
+
+.fade-in:nth-of-type(3) {
+  animation-delay: 0.16s;
+}
+
+.fade-in:nth-of-type(4) {
+  animation-delay: 0.24s;
+}
+
+.fade-in:nth-of-type(5) {
+  animation-delay: 0.32s;
+}
+
+.fade-in:nth-of-type(6) {
+  animation-delay: 0.40s;
+}
+
+.fade-in:nth-of-type(7) {
+  animation-delay: 0.48s;
+}
+
+.fade-in:nth-of-type(8) {
+  animation-delay: 0.56s;
+}
+
+/* ===================================================
+   RESPONSIVE — Tablet (≤ 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  :root {
+    --fs-4xl: 1.875rem;
+    --fs-3xl: 1.5rem;
+    --fs-2xl: 1.25rem;
+  }
+
+  .nav-list {
+    gap: var(--space-xs) var(--space-md);
+  }
+
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero-photo-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .english-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE — Mobile (≤ 480px)
+   =================================================== */
+@media (max-width: 480px) {
+  :root {
+    --fs-4xl: 1.5rem;
+    --fs-xl: 1.125rem;
+    --space-3xl: 2.5rem;
+    --space-2xl: 2rem;
+  }
+
+  .nav-list {
+    gap: var(--space-xs) var(--space-sm);
+  }
+
+  .nav-link {
+    font-size: var(--fs-xs);
+    padding: var(--space-xs) var(--space-xs);
+  }
+
+  .hero-photo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-title {
+    font-size: var(--fs-lg);
+  }
+
+  .glass-card {
+    padding: var(--space-md);
+  }
+
+  .project-card {
+    padding: var(--space-md);
+  }
+
+  .experience-item {
+    padding: var(--space-md);
+  }
+
+  .education-item {
+    padding: var(--space-md);
+  }
+
+  .footer-content {
+    gap: var(--space-md);
+  }
+
+  .skill-tag {
+    font-size: var(--fs-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {
@@ -779,6 +922,11 @@ h6 {
     transition-duration: 0.01ms !important;
   }
 
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
@@ -793,10 +941,21 @@ h6 {
     color: #111;
   }
 
+  .header {
+    position: static;
+    background: white;
+    backdrop-filter: none;
+  }
+
   .glass-card {
     background: white;
     backdrop-filter: none;
     border: 1px solid #ddd;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: none;
   }
 
   a {
