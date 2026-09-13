@@ -243,6 +243,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================================
+   SKILLS
+   =================================================== */
+.skills-group {
+  margin-bottom: var(--space-xl);
+}
+
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-category {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-tag {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.skill-tag:hover {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  background: var(--accent-cyan-glow);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-2px);
+}
+
+.skill-tag.accent {
+  color: var(--accent-cyan);
+  border-color: rgba(0, 212, 170, 0.25);
+  background: var(--accent-cyan-glow);
+}
+
+.skill-tag.accent:hover {
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {
