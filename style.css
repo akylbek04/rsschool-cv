@@ -474,6 +474,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================================
+   PROJECTS
+   =================================================== */
+.projects-grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  border-left: 3px solid transparent;
+  transition: border-color var(--transition-base), background var(--transition-base), transform var(--transition-base);
+}
+
+.project-card:hover {
+  border-left-color: var(--accent-cyan);
+  transform: translateX(4px);
+}
+
+.project-name {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.project-desc {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: auto;
+  padding-top: var(--space-sm);
+}
+
+.project-link {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--accent-cyan);
+  transition: color var(--transition-fast);
+}
+
+.project-link:hover {
+  color: var(--accent-purple);
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {
