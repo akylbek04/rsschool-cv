@@ -714,6 +714,53 @@ h6 {
 }
 
 /* ===================================================
+   FOOTER
+   =================================================== */
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-xl) 0;
+  margin-top: var(--space-2xl);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--accent-cyan);
+}
+
+.footer-year {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.footer-rs {
+  display: inline-flex;
+  transition: opacity var(--transition-base);
+}
+
+.footer-rs:hover {
+  opacity: 0.8;
+}
+
+.footer-logo {
+  height: 30px;
+  width: auto;
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {
