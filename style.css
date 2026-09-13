@@ -299,6 +299,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================================
+   CODE
+   =================================================== */
+.code-card {
+  overflow: hidden;
+}
+
+.code-description {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  line-height: var(--lh-relaxed);
+}
+
+.code-block {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: #e2e8f0;
+  background: var(--bg-code);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+.code-block code {
+  font-family: inherit;
+}
+
+.code-block::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-block::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  background: var(--border-card);
+  border-radius: var(--radius-full);
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {

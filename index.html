@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akylbek Zamirov — Frontend Developer CV</title>
-  <meta name="description" content="Frontend Developer CV of Akylbek Zamirov. React, TypeScript, Next.js specialist with 3+ years of experience.">
+  <meta name="description"
+    content="Frontend Developer CV of Akylbek Zamirov. React, TypeScript, Next.js specialist with 3+ years of experience.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container">
@@ -26,13 +31,7 @@
       </nav>
       <div class="hero">
         <div class="hero-photo-wrapper">
-          <img
-            src="photo.jpg"
-            alt="Photo of Akylbek Zamirov"
-            class="hero-photo"
-            width="180"
-            height="180"
-          >
+          <img src="photo.jpg" alt="Photo of Akylbek Zamirov" class="hero-photo" width="180" height="180">
         </div>
         <h1 class="hero-name">Akylbek Zamirov</h1>
         <p class="hero-title">Frontend Developer</p>
@@ -75,7 +74,8 @@
           </li>
           <li class="contact-item">
             <span class="contact-icon" aria-hidden="true">&#128279;</span>
-            <a href="https://linkedin.com/in/akylbek" target="_blank" rel="noopener noreferrer">linkedin.com/in/akylbek</a>
+            <a href="https://linkedin.com/in/akylbek" target="_blank"
+              rel="noopener noreferrer">linkedin.com/in/akylbek</a>
           </li>
           <li class="contact-item">
             <span class="contact-icon" aria-hidden="true">&#128172;</span>
@@ -128,10 +128,37 @@
         </div>
       </section>
 
+
+      <section id="code" class="section">
+        <h2 class="section-title">Code Example</h2>
+        <div class="glass-card code-card">
+          <p class="code-description">
+            <strong>Codewars Kata:</strong> Sum of Digits / Digital Root (6 kyu)
+            &mdash; Given a non-negative integer, return its digital root:
+            the recursive sum of all digits until a single digit remains.
+          </p>
+          <pre class="code-block"><code>function digitalRoot(n) {
+  if (n &lt; 10) return n;
+  return digitalRoot(
+    n.toString()
+      .split('')
+      .reduce((sum, digit) =&gt; sum + Number(digit), 0)
+  );
+}
+
+// Examples:
+// digitalRoot(16)   =&gt; 1 + 6 =&gt; 7
+// digitalRoot(942)  =&gt; 9 + 4 + 2 =&gt; 15 =&gt; 1 + 5 =&gt; 6
+// digitalRoot(132189) =&gt; 24 =&gt; 6
+// digitalRoot(493193) =&gt; 29 =&gt; 11 =&gt; 2</code></pre>
+        </div>
+      </section>
+
     </div>
   </main>
 
   <footer class="footer">
   </footer>
 </body>
+
 </html>
