@@ -204,6 +204,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================================
+   ABOUT
+   =================================================== */
+.about-text {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+}
+
+/* ===================================================
+   CONTACTS
+   =================================================== */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.contact-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+}
+
+.contact-icon {
+  font-size: var(--fs-xl);
+  flex-shrink: 0;
+}
+
+/* ===================================================
    ACCESSIBILITY
    =================================================== */
 :focus-visible {
